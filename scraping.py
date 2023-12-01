@@ -102,7 +102,9 @@ def extract_odds(year):
     save_odds(odds, year)
 
 if __name__ == '__main__':
-    for year in range(2009, 2024):
+    INITIAL_YEAR = 2023
+    FINAL_YEAR = 2024
+    for year in range(INITIAL_YEAR, FINAL_YEAR):
         if f'odds/{year}.csv' in glob('odds/*.csv'): continue
         print(year)
         extract_odds(year)
